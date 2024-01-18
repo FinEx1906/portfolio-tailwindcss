@@ -1,0 +1,15 @@
+a {
+    outline: none;
+}
+
+button {
+    outline: none;
+}
+
+input {
+    outline: none;
+}
+
+img {
+    image-rendering: auto;
+}

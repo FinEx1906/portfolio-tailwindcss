@@ -1,4 +1,3 @@
-// base
 const projectLoop = [
     {
         id: 1,
@@ -13,12 +12,39 @@ const projectLoop = [
         projectInfo: "Then! I created a dashboard using javascript to test myself and it has some great functionality. Create new users, register and login, etc",
         projectImages: "../../assets/images/purple-free-dashbord.png",
         skill: ["HTML", "CSS", "TAILWINDCSS", "SASS", "javascript"]
-    }
+    },
+    {
+        id: 1,
+        project: "My first website for a training center",
+        projectInfo: "I used this site for testing at my first training center. I created this site for my training center",
+        projectImages: "../../assets/images/lastProject.png",
+        skill: ["HTML", "CSS", "BOOTSTRAP", "SASS", "JAVASCRIPT"]
+    },
+    {
+        id: 2,
+        project: "Dashboard site for testing",
+        projectInfo: "Then! I created a dashboard using javascript to test myself and it has some great functionality. Create new users, register and login, etc",
+        projectImages: "../../assets/images/purple-free-dashbord.png",
+        skill: ["HTML", "CSS", "TAILWINDCSS", "SASS", "javascript"]
+    },
+    {
+        id: 1,
+        project: "My first website for a training center",
+        projectInfo: "I used this site for testing at my first training center. I created this site for my training center",
+        projectImages: "../../assets/images/lastProject.png",
+        skill: ["HTML", "CSS", "BOOTSTRAP", "SASS", "JAVASCRIPT"]
+    },
+    {
+        id: 2,
+        project: "Dashboard site for testing",
+        projectInfo: "Then! I created a dashboard using javascript to test myself and it has some great functionality. Create new users, register and login, etc",
+        projectImages: "../../assets/images/purple-free-dashbord.png",
+        skill: ["HTML", "CSS", "TAILWINDCSS", "SASS", "javascript"]
+    },
 ]
 
-const projectContainer = document.getElementById('projectContainer')
+const projectContainer = document.getElementById('projectsContainer')
 
-// Loops
 projectLoop.map((item) => {
     projectContainer.innerHTML += `
     <div class="my-16">
@@ -46,5 +72,5 @@ projectLoop.map((item) => {
         `).join('')}
         </div>
     </div>
-`
+    `
 })
