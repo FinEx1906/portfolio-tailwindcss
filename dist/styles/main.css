@@ -1,15 +1,19 @@
 a {
-    outline: none;
+  outline: none;
 }
 
 button {
-    outline: none;
+  outline: none;
 }
 
 input {
-    outline: none;
+  outline: none;
 }
 
 img {
-    image-rendering: auto;
+  image-rendering: auto;
+}
+
+.display-none {
+  @apply hidden;
 }
