@@ -61,10 +61,55 @@
       .add {
         display: block !important;
       }
+      .scroll-weather {
+        scale: 0 1;
+        animation: scroll-weather linear;
+        animation-timeline: scroll();
+        transform-origin: left;
+      }
+      @keyframes scroll-weather {
+        to {
+          scale: 1 1;
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #e2e8f0;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+      }
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      button,
+      a,
+      li {
+        animation: fade-out linear;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+      }
+      @keyframes fade-out {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
   </head>
 
   <body>
+    <div class="scroll-weather fixed h-2 top-0 z-50 bg-blue-100 w-full"></div>
     <div class="container">
       <header>
         <nav class="flex justify-between items-center navbar my-10">
@@ -133,7 +178,9 @@
         <div>
           <div class="my-10">
             <div class="routes">
-              <a href="../index.html" class="no-underline text-gray-600">Home</a>
+              <a href="../index.html" class="no-underline text-gray-600"
+                >Home</a
+              >
               <span>/</span>
               <a href="./project.html" class="no-underline text-gray-600"
                 >Project</a
@@ -143,11 +190,57 @@
                 >About</a
               >
             </div>
-            <main class="main-content flex">
-              <h1>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error,
-                ad.
+            <main class="main-content flex flex-col my-10">
+              <h1
+                class="font-bold flex items-center tracking-tighter sm:text-2xl"
+              >
+                Hey, I’m FinEx
+                <span
+                  class="text-blue-400 sm:text-xs sm:tracking-normal text-lg block ml-6 pl-2 sm:pl-1 sm:pr-1 pr-2 pt-1 pb-1 rounded-2xl bg-blue-50"
+                  >Fast service</span
+                >
               </h1>
+              <div class="my-5">
+                <section class="flex w-full justify-between my-3 flex-wrap">
+                  <p>Who i am:</p>
+                  <p class="max-w-xl ml-16">
+                    i'm a FrontEnd and Mobile Developer. I specialize in
+                    creating websites and apps for mobile (android and iOS).
+                  </p>
+                </section>
+                <section class="flex w-full justify-between my-3 flex-wrap">
+                  <p>Education:</p>
+                  <p class="max-w-xl ml-16">
+                    I studied in the Republic of Karakalpakstan, my first
+                    training center was the IT CENTER training center. I learned
+                    HTML, CSS, SASS, BOOTSTRAP, JAVASCRIPT, REACT.JS here
+                  </p>
+                </section>
+                <section class="flex w-full justify-between my-3 flex-wrap">
+                  <p>Experience:</p>
+                  <p class="max-w-xl ml-16">
+                    <span class="block"
+                      >Online Developer and Traditional Developer. I am studying
+                      web design</span
+                    >
+                  </p>
+                </section>
+                <section class="flex w-full justify-between my-3 flex-wrap">
+                  <p>Work History:</p>
+                  <p class="max-w-xl ml-16">
+                    <span class="block">Freelance Web Developer</span>
+                    <small class="opacity-25"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laboriosam, dolor.</small
+                    >
+                    <span class="block my-3">Freelance Web Developer</span>
+                    <small class="opacity-25"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Laboriosam, dolor.</small
+                    >
+                  </p>
+                </section>
+              </div>
             </main>
           </div>
         </div>

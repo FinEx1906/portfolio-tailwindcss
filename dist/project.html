@@ -61,10 +61,71 @@
       .add {
         display: block !important;
       }
+      .scroll-weather {
+        scale: 0 1;
+        animation: scroll-weather linear;
+        animation-timeline: scroll();
+        transform-origin: left;
+      }
+      @keyframes scroll-weather {
+        to {
+          scale: 1 1;
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #e2e8f0;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+      }
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      button,
+      a,
+      li {
+        animation: fade-out linear;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+      }
+      @keyframes fade-out {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .main-content img {
+        animation: fade-in linear forwards;
+        opacity: 0;
+        animation-timeline: view();
+        animation-range: entry-crossing;
+      }
+      @keyframes fade-in {
+        from {
+          scale: 0;
+          opacity: 0;
+        }
+        to {
+          scale: 1;
+          opacity: 1;
+        }
+      }
     </style>
   </head>
 
   <body>
+    <div class="scroll-weather fixed h-2 top-0 z-50 bg-blue-100 w-full"></div>
     <div class="container">
       <header>
         <nav class="flex justify-between items-center navbar my-10">
@@ -133,7 +194,9 @@
         <div>
           <div class="my-10">
             <div class="routes">
-              <a href="../index.html" class="no-underline text-gray-600">Home</a>
+              <a href="../index.html" class="no-underline text-gray-600"
+                >Home</a
+              >
               <span>/</span>
               <a href="./project.html" class="no-underline text-gray-600"
                 >Project</a
